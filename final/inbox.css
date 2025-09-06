@@ -1,0 +1,158 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f8f8f8;
+}
+
+/* Home button */
+.back-home {
+  margin: 15px;
+}
+
+.home-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid #15733F;
+  border-radius: 50px; /* fully round */
+  background-color: #ffffff;
+  color: #15733F;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.home-btn:hover {
+  background-color: #15733F;
+  color: white;
+}
+
+/* Layout */
+.inbox-container {
+  display: flex;
+  height: 90vh;
+  border: 1px solid #ccc;
+  margin: 10px;
+  border-radius: 20px; /* rounded container */
+  overflow: hidden;
+}
+
+/* Vendor list */
+.vendor-list {
+  width: 220px;
+  background: #fff;
+  border-right: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 0 0 0 20px; /* round left corners */
+}
+
+.vendor-list h3 {
+  margin: 0 0 10px 0;
+}
+
+.vendor-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.vendor-list li {
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 25px; /* round items */
+  transition: 0.2s;
+}
+
+.vendor-list li:hover {
+  background: #f0f0f0;
+}
+
+.vendor-list li.active {
+  background: #15733F;
+  color: white;
+}
+
+/* Chat area */
+.chat-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0 20px 20px 0; /* round right corners */
+  overflow: hidden;
+}
+
+.chat-header {
+  padding: 15px;
+  background: #15733F;
+  color: white;
+  border-radius: 0 20px 0 0; /* round top right */
+}
+
+.chat-messages {
+  flex-grow: 1;
+  padding: 15px;
+  overflow-y: auto;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  margin: 5px 0;
+  padding: 12px 18px;
+  border-radius: 25px; /* round chat bubbles */
+  max-width: 70%;
+}
+
+.message.buyer {
+  background: #15733F;
+  color: white;
+  align-self: flex-end;
+}
+
+.message.vendor {
+  background: #e5e5e5;
+  align-self: flex-start;
+}
+
+.chat-input {
+  display: flex;
+  padding: 15px;
+  background: #f1f1f1;
+}
+
+.chat-input input {
+  flex-grow: 1;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 25px; 
+}
+
+.chat-input button {
+  margin-left: 10px;
+  padding: 12px 18px;
+  border: none;
+  background: #15733F;
+  color: white;
+  border-radius: 25px; 
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.chat-input button:hover {
+  background: #12582F;
+}
+
+.chat-input button#offerBtn {
+  margin-left: 10px;
+  padding: 12px 18px;
+  border: none;
+  background: #FFA500; 
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.chat-input button#offerBtn:hover {
+  background: #e59400;
+}

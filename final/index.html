@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="navigation.css">
+  <link rel="stylesheet" href="card-container.css">
+  <title>Home</title>
+</head>
+<body>
+  <div class="banner"></div>
+  <div class="header">
+    <div class="logo" onclick="location.href='index.html'">
+      <p>S P R O U T</p>
+    </div>
+    <div class="search">
+       <input type="text" id="searchInput" placeholder="Search Sprout">
+    </div>
+    <div class="location">
+      <button id="locationBtn">Location</button>
+    </div>
+
+    <!-- Location Popup -->
+    <div id="locationPopup" class="popup">
+      <div class="popup-content">
+        <span class="close">&times;</span>
+        <h3>Enter Your Address</h3>
+
+        <input type="text" id="streetInput" placeholder="Street Address">
+        <input type="text" id="suburbInput" placeholder="Suburb">
+        
+        <select id="stateInput">
+          <option value="">Select State</option>
+          <option value="NSW">NSW</option>
+          <option value="VIC">VIC</option>
+          <option value="QLD">QLD</option>
+          <option value="WA">WA</option>
+          <option value="SA">SA</option>
+          <option value="TAS">TAS</option>
+          <option value="ACT">ACT</option>
+          <option value="NT">NT</option>
+        </select>
+        
+        <input type="text" id="postcodeInput" placeholder="Postcode" maxlength="4">
+
+        <button id="setLocationBtn">Save</button>
+        <p id="userLocation"></p>
+      </div>
+    </div>
+
+    <div class="saved">
+      <button  onclick="location.href='inbox.html'">Inbox</button>
+    </div>
+
+    <div class="saved">
+      <button  onclick="location.href='saved.html'">Saved</button>
+    </div>
+
+    <div class="cart">
+      <button onclick="location.href='cart.html'">Cart</button>
+    </div>
+    
+  </div>
+  <div class="content">
+    <div class="sidebar">
+      <button class="filter" onclick="location.href='Filter.html'">Filter</button>
+      <button onclick="location.href='Vegetables.html'">Vegetables</button>
+      <button onclick="location.href='Fruits.html'">Fruits</button>
+      <button onclick="location.href='Dairy.html'">Dairy</button>
+      <button onclick="location.href='Nuts.html'">Nuts</button>
+      <button onclick="location.href='Preserves.html'">Preserves</button>
+      <button onclick="location.href='Spices.html'">Spices</button>
+      <button onclick="location.href='Beverages.html'">Beverages</button>
+    </div>
+    <div class="content-main">
+      <div class="content-heading">
+        <h1>Popular Deals</h1>
+        <button>See All</button>
+      </div>
+      
+      <div class="all-cards">
+        <!-- First Card -->
+        <div class="card">
+          <div class="image-container">
+            <img src="product-img/carrot.jpg" alt="Product Image">
+             <button class="save-btn">📌</button>
+          </div>
+
+          <!-- Description and seller pic container -->
+          <div class="card-info">
+            <div class="info-left">
+              <h3 class="product-name">Baby organic carrots</h3>
+              <div class="price">
+                <p class="price-kilo">A$6.00/kg</p>
+                <p class="price-unit">A$1.2 ea</p>
+              </div>
+              <div class="seller-info"> 
+                <p class="rating">4.0 ★</p>
+                <p class="seller-name">Sold by Hannah S.</p>
+                <div class="seller-pic-wrapper"><img src="seller-img/seller1.jpg" alt="Seller Profile" class="seller-pic"> </div>
+              </div>
+            </div>
+            
+          </div>
+
+          <!-- Quantity control -->
+          <div class="quantity-control">
+            <button class="qty-btn decrease">−</button>
+            <input type="number" class="qty-input" value="1" min="1">
+            <button class="qty-btn increase">+</button>
+          </div>
+
+          <!-- Add to Cart and Message buttons -->
+          <div class="card-actions">
+            <button class="add-to-cart-btn">Add to Cart</button>
+            <button class="message-btn" onclick="location.href='inbox.html'">Message</button>
+          </div>
+        </div>
+
+        <!-- Second Card -->
+        <div class="card">
+          <div class="image-container">
+            <img src="product-img/granola.jpg" alt="Product Image">
+             <button class="save-btn">📌</button>
+          </div>
+          <h3 class="product-name">Homemade granola</h3>
+          <div class="price">
+            <p class="price-kilo">A$6.00/kg</p>
+            <p class="price-unit">A$6.20 ea</p>
+          </div>
+          <div class="seller-info"> 
+                <p class="rating">4.0 ★</p>
+                <p class="seller-name">Sold by Hannah S.</p>
+                <div class="seller-pic-wrapper"><img src="seller-img/seller2.jpg" alt="Seller Profile" class="seller-pic"> </div>
+              </div>
+
+          <div class="quantity-control">
+            <button class="qty-btn decrease">−</button>
+            <input type="number" class="qty-input" value="1" min="1">
+            <button class="qty-btn increase">+</button>
+          </div>
+          
+          <div class="card-actions">
+            <button class="add-to-cart-btn">Add to Cart</button>
+            <button class="message-btn" onclick="location.href='inbox.html'">Message</button>
+          </div>
+        </div>
+
+        <!-- Third Card -->
+        <div class="card">
+          <div class="image-container">
+            <img src="product-img/black pepper.jpg" alt="Product Image">
+             <button class="save-btn">📌</button>
+          </div>
+          <h3 class="product-name">Black Pepper</h3>
+          <div class="price">
+            <p class="price-kilo">A$6.00/kg</p>
+            <p class="price-unit">A$6.20 ea</p>
+          </div>
+         <div class="seller-info"> 
+                <p class="rating">4.0 ★</p>
+                <p class="seller-name">Sold by Hannah S.</p>
+                <div class="seller-pic-wrapper"><img src="seller-img/seller3.jpg" alt="Seller Profile" class="seller-pic"> </div>
+              </div>
+
+          <div class="quantity-control">
+            <button class="qty-btn decrease">−</button>
+            <input type="number" class="qty-input" value="1" min="1">
+            <button class="qty-btn increase">+</button>
+          </div>
+          
+          <div class="card-actions">
+            <button class="add-to-cart-btn">Add to Cart</button>
+            <button class="message-btn" onclick="location.href='inbox.html'">Message</button>
+          </div>
+        </div>
+
+        <!-- Fourth Card -->
+        <div class="card">
+          <div class="image-container">
+            <img src="product-img/onion.jpg" alt="Product Image">
+             <button class="save-btn">📌</button>
+          </div>
+          <h3 class="product-name">Onion</h3>
+          <div class="price">
+            <p class="price-kilo">A$6.00/kg</p>
+            <p class="price-unit">A$6.20 ea</p>
+          </div>
+          <div class="seller-info"> 
+                <p class="rating">4.3 ★</p>
+                <p class="seller-name">Sold by Steve S.</p>
+                <div class="seller-pic-wrapper"><img src="seller-img/seller4.jpg" alt="Seller Profile" class="seller-pic"> </div>
+              </div>
+
+          <div class="quantity-control">
+            <button class="qty-btn decrease">−</button>
+            <input type="number" class="qty-input" value="1" min="1">
+            <button class="qty-btn increase">+</button>
+          </div>
+          
+          <div class="card-actions">
+            <button class="add-to-cart-btn">Add to Cart</button>
+            <button class="message-btn" onclick="location.href='inbox.html'">Message</button>
+          </div>
+        </div>
+        
+      </div>
+
+      <div class="content-heading">
+        <h1>Recently Viewed</h1>
+        <button>See All</button>
+      </div>
+
+      <div class="all-cards">
+         <!-- 5 -->
+        <div class="card">
+          <div class="image-container">
+            <img src="product-img/cucumber.jpg" alt="Product Image">
+             <button class="save-btn">📌</button>
+          </div>
+          <h3 class="product-name">Lebanese Cucumber</h3>
+          <div class="price">
+            <p class="price-kilo">A$6.00/kg</p>
+            <p class="price-unit">A$6.20 ea</p>
+          </div>
+          <div class="seller-info"> 
+                <p class="rating">3.2 ★</p>
+                <p class="seller-name">Sold by Marine C.</p>
+                <div class="seller-pic-wrapper"><img src="seller-img/seller5.jpg" alt="Seller Profile" class="seller-pic"> </div>
+              </div>
+
+          <div class="quantity-control">
+            <button class="qty-btn decrease">−</button>
+            <input type="number" class="qty-input" value="1" min="1">
+            <button class="qty-btn increase">+</button>
+          </div>
+          
+          <div class="card-actions">
+            <button class="add-to-cart-btn">Add to Cart</button>
+            <button class="message-btn" onclick="location.href='inbox.html'">Message</button>
+          </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="card">
+          <div class="image-container">
+            <img src="product-img/lemon.jpg" alt="Product Image">
+             <button class="save-btn">📌</button>
+          </div>
+          <h3 class="product-name">Seedless lemon</h3>
+          <div class="price">
+            <p class="price-kilo">A$6.00/kg</p>
+            <p class="price-unit">A$6.20 ea</p>
+          </div>
+          <div class="seller-info"> 
+                <p class="rating">5.0 ★</p>
+                <p class="seller-name">Sold by Raymond L.</p>
+                <div class="seller-pic-wrapper"><img src="seller-img/seller6.jpg" alt="Seller Profile" class="seller-pic"> </div>
+              </div>
+
+          <div class="quantity-control">
+            <button class="qty-btn decrease">−</button>
+            <input type="number" class="qty-input" value="1" min="1">
+            <button class="qty-btn increase">+</button>
+          </div>
+          
+          <div class="card-actions">
+            <button class="add-to-cart-btn">Add to Cart</button>
+            <button class="message-btn" onclick="location.href='inbox.html'">Message</button>
+          </div>
+        </div>
+
+         <!-- 7 -->
+        <div class="card">
+          <div class="image-container">
+            <img src="product-img/watermelon.jpg" alt="Product Image">
+             <button class="save-btn">📌</button>
+          </div>
+          <h3 class="product-name">Ripened watermelon seedless</h3>
+          <div class="price">
+            <p class="price-kilo">A$6.00/kg</p>
+            <p class="price-unit">A$6.20 ea</p>
+          </div>
+          <div class="seller-info"> 
+                <p class="rating">5.0 ★</p>
+                <p class="seller-name">Sold by Liam W.</p>
+                <div class="seller-pic-wrapper"><img src="seller-img/seller7.jpg" alt="Seller Profile" class="seller-pic"> </div>
+              </div>
+
+          <div class="quantity-control">
+            <button class="qty-btn decrease">−</button>
+            <input type="number" class="qty-input" value="1" min="1">
+            <button class="qty-btn increase">+</button>
+          </div>
+          
+          <div class="card-actions">
+            <button class="add-to-cart-btn">Add to Cart</button>
+            <button class="message-btn" onclick="location.href='inbox.html'">Message</button>
+          </div>
+        </div>
+
+         <!-- 8 -->
+        <div class="card">
+          <div class="image-container">
+            <img src="product-img/cardamom.jpg" alt="Product Image">
+             <button class="save-btn">📌</button>
+          </div>
+          <h3 class="product-name">Cardamom</h3>
+          <div class="price">
+            <p class="price-kilo">A$6.00/kg</p>
+            <p class="price-unit">A$6.20 ea</p>
+          </div>
+          <div class="seller-info"> 
+                <p class="rating">5.0 ★</p>
+                <p class="seller-name">Sold by James D.</p>
+                <div class="seller-pic-wrapper"><img src="seller-img/seller8.jpg" alt="Seller Profile" class="seller-pic"> </div>
+              </div>
+
+          <div class="quantity-control">
+            <button class="qty-btn decrease">−</button>
+            <input type="number" class="qty-input" value="1" min="1">
+            <button class="qty-btn increase">+</button>
+          </div>
+          
+          <div class="card-actions">
+            <button class="add-to-cart-btn">Add to Cart</button>
+            <button class="message-btn" onclick="location.href='inbox.html'">Message</button>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <script src="cart.js"></script>
+
+  <!-- Contact Seller Modal -->
+<div id="contactSellerModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Contact Seller</h2>
+    <p id="productName"></p>
+    <form>
+      <label for="buyerName">Your Name:</label>
+      <input type="text" id="buyerName" required>
+
+      <label for="buyerEmail">Your Email:</label>
+      <input type="email" id="buyerEmail" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" rows="4" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  // Get modal and close button
+  const modal = document.getElementById("contactSellerModal");
+  const closeBtn = modal.querySelector(".close");
+  const productNameEl = document.getElementById("productName");
+
+  // Remove old card click listener
+  // Instead, listen for clicks on the Message button
+  const messageButtons = document.querySelectorAll(".message-btn");
+
+  messageButtons.forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      const card = e.target.closest(".card");
+      const name = card.querySelector(".product-name").textContent;
+
+      // Set product name in modal
+      productNameEl.textContent = `You are contacting the seller of: ${name}`;
+
+      // Show modal
+      modal.style.display = "block";
+    });
+  });
+
+  // Close modal
+  closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  // Close modal if clicked outside content
+  window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+
+  // Optional: handle form submit
+  modal.querySelector("form").addEventListener("submit", (e) => {
+    e.preventDefault();
+    alert("Message sent to seller!");
+    modal.style.display = "none";
+  });
+
+  const qtyControls = document.querySelectorAll('.quantity-control');
+
+  qtyControls.forEach(control => {
+    const input = control.querySelector('.qty-input');
+    const btnDecrease = control.querySelector('.decrease');
+    const btnIncrease = control.querySelector('.increase');
+
+    // Decrease button
+    btnDecrease.addEventListener('click', () => {
+      let current = parseInt(input.value) || 1;
+      if (current > parseInt(input.min) || 1) {
+        input.value = current - 1;
+      }
+    });
+
+    // Increase button
+    btnIncrease.addEventListener('click', () => {
+      let current = parseInt(input.value) || 1;
+      input.value = current + 1;
+    });
+  });
+
+  const addCartBtns = document.querySelectorAll('.add-to-cart-btn');
+  addCartBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const card = btn.closest('.card');
+      const productName = card.querySelector('.product-name').textContent;
+      const priceUnit = card.querySelector('.price-unit').textContent;
+      const quantity = parseInt(card.querySelector('.qty-input').value);
+      const imageSrc = card.querySelector('img').getAttribute('src').split('/').pop(); // only filename
+
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const existingItemIndex = cart.findIndex(item => item.name === productName);
+      if (existingItemIndex > -1) {
+        cart[existingItemIndex].quantity += quantity;
+      } else {
+        cart.push({ name: productName, price: priceUnit, quantity, image: imageSrc });
+      }
+      localStorage.setItem('cart', JSON.stringify(cart));
+      alert(`Added ${quantity} × ${productName} to cart!`);
+    });
+  });
+
+  const searchInput = document.getElementById("searchInput");
+  const cards = document.querySelectorAll(".card");
+
+  searchInput.addEventListener("input", function () {
+    const searchValue = searchInput.value.toLowerCase();
+
+    cards.forEach(card => {
+      const productName = card.querySelector(".product-name").textContent.toLowerCase();
+
+      if (productName.includes(searchValue)) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  });
+
+</script>
+
+<script>
+const locationBtn = document.getElementById("locationBtn");
+const popup = document.getElementById("locationPopup");
+const closePopup = popup.querySelector(".close");
+const setLocationBtn = document.getElementById("setLocationBtn");
+const userLocation = document.getElementById("userLocation");
+
+// Form inputs
+const streetInput = document.getElementById("streetInput");
+const suburbInput = document.getElementById("suburbInput");
+const stateInput = document.getElementById("stateInput");
+const postcodeInput = document.getElementById("postcodeInput");
+
+// Show popup
+locationBtn.addEventListener("click", () => {
+  popup.style.display = "block";
+});
+
+// Close popup
+closePopup.addEventListener("click", () => {
+  popup.style.display = "none";
+});
+
+// Save location
+setLocationBtn.addEventListener("click", () => {
+  const street = streetInput.value.trim();
+  const suburb = suburbInput.value.trim();
+  const state = stateInput.value;
+  const postcode = postcodeInput.value.trim();
+
+  if (!street || !suburb || !state || !postcode) {
+    userLocation.innerText = "⚠️ Please fill out all fields.";
+    return;
+  }
+
+  const fullAddress = `${street}, ${suburb}, ${state} ${postcode}`;
+  userLocation.innerText = `✅ Location set to: ${fullAddress}`;
+
+  
+  locationBtn.textContent = suburb + ", " + state;
+  popup.style.display = "none";
+});
+
+
+window.addEventListener("click", (e) => {
+  if (e.target === popup) {
+    popup.style.display = "none";
+  }
+});
+</script>
+
+
+</body>
+</html>

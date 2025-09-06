@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inbox</title>
+  <link rel="stylesheet" href="inbox.css">
+</head>
+<body>
+
+  <div class="back-home">
+    <a href="index.html" class="home-btn">← Home</a>
+  </div>
+
+  <div class="inbox-container">
+    <!-- Vendor List -->
+    <div class="vendor-list">
+      <h3>Vendors</h3>
+      <ul>
+        <li data-vendor="vendor1">Hannah S.</li>
+        <li data-vendor="vendor2">Laurel P.</li>
+        <li data-vendor="vendor3">Green Farm</li>
+      </ul>
+    </div>
+
+   
+    <div class="chat-container">
+      <div class="chat-header">
+        <h2 id="vendor-name">Select a vendor</h2>
+      </div>
+
+      <div class="chat-messages" id="chat-messages"></div>
+
+      <div class="chat-input">
+        <input type="text" id="messageInput" placeholder="Type your message..." disabled>
+        <button id="sendBtn" disabled>Send</button>
+         <button id="offerBtn" disabled>Make Offer</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="inbox.js"></script>
+</body>
+</html>

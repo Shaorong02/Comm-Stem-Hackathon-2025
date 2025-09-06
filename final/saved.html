@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="navigation.css">
+  <link rel="stylesheet" href="card-container.css">
+  <title>Home</title>
+</head>
+<body>
+  <div class="banner"></div>
+  <div class="header">
+    <div class="logo" onclick="location.href='index.html'">
+      <p>S P R O U T</p>
+    </div>
+    <div class="search">
+       <input type="text" placeholder="Search Sprout">
+    </div>
+    <div class="location">
+      <button>Location</button>
+    </div>
+
+    <div class="saved">
+      <button  onclick="location.href='inbox.html'">Inbox</button>
+    </div>
+
+    <div class="saved">
+      <button  onclick="location.href='saved.html'">Saved</button>
+    </div>
+
+    <div class="cart">
+      <button onclick="location.href='cart.html'">Cart</button>
+    </div>
+    
+  </div>
+  <div class="content">
+    <div class="sidebar">
+      <button class="filter" onclick="location.href='Filter.html'">Filter</button>
+      <button onclick="location.href='Vegetables.html'">Vegetables</button>
+      <button onclick="location.href='Fruits.html'">Fruits</button>
+      <button onclick="location.href='Dairy.html'">Dairy</button>
+      <button onclick="location.href='Nuts.html'">Nuts</button>
+      <button onclick="location.href='Preserves.html'">Preserves</button>
+      <button onclick="location.href='Spices.html'">Spices</button>
+      <button onclick="location.href='Beverages.html'">Beverages</button>
+    </div>
+    <div class="content-main">
+      <div class="content-heading">
+        <h1>Saved</h1>
+        <button>See All</button>
+      </div>
+      
+      <div class="all-cards">
+        <!-- First Card -->
+        <div class="card">
+          <div class="image-container">
+            <img src="product-img/carrot.jpg" alt="Product Image">
+             <button class="save-btn">📌</button>
+          </div>
+
+          <!-- Description and seller pic container -->
+          <div class="card-info">
+            <div class="info-left">
+              <h3 class="product-name">Baby organic carrots</h3>
+              <div class="price">
+                <p class="price-kilo">A$6.00/kg</p>
+                <p class="price-unit">A$1.2 ea</p>
+              </div>
+              <div class="seller-info"> 
+                <p class="rating">4.0 ★</p>
+                <p class="seller-name">Sold by Hannah S.</p>
+                <div class="seller-pic-wrapper"><img src="seller-img/seller1.jpg" alt="Seller Profile" class="seller-pic"> </div>
+              </div>
+            </div>
+            
+          </div>
+
+          <!-- Quantity control -->
+          <div class="quantity-control">
+            <button class="qty-btn decrease">−</button>
+            <input type="number" class="qty-input" value="1" min="1">
+            <button class="qty-btn increase">+</button>
+          </div>
+
+          <!-- Add to Cart and Message buttons -->
+          <div class="card-actions">
+            <button class="add-to-cart-btn">Add to Cart</button>
+            <button class="message-btn">Message</button>
+          </div>
+        </div>
+
+        <!-- Second Card -->
+        <div class="card">
+          <div class="image-container">
+            <img src="product-img/granola.jpg" alt="Product Image">
+             <button class="save-btn">📌</button>
+          </div>
+          <h3 class="product-name">Homemade granola</h3>
+          <div class="price">
+            <p class="price-kilo">A$6.00/kg</p>
+            <p class="price-unit">A$6.20 ea</p>
+          </div>
+          <div class="seller-info"> 
+                <p class="rating">4.0 ★</p>
+                <p class="seller-name">Sold by Hannah S.</p>
+                <div class="seller-pic-wrapper"><img src="seller-img/seller2.jpg" alt="Seller Profile" class="seller-pic"> </div>
+              </div>
+
+          <div class="quantity-control">
+            <button class="qty-btn decrease">−</button>
+            <input type="number" class="qty-input" value="1" min="1">
+            <button class="qty-btn increase">+</button>
+          </div>
+          
+          <div class="card-actions">
+            <button class="add-to-cart-btn">Add to Cart</button>
+            <button class="message-btn">Message</button>
+          </div>
+        </div>
+
+        <!-- Third Card -->
+        <div class="card">
+          <div class="image-container">
+            <img src="product-img/black pepper.jpg" alt="Product Image">
+             <button class="save-btn">📌</button>
+          </div>
+          <h3 class="product-name">Black Pepper</h3>
+          <div class="price">
+            <p class="price-kilo">A$6.00/kg</p>
+            <p class="price-unit">A$6.20 ea</p>
+          </div>
+         <div class="seller-info"> 
+                <p class="rating">4.0 ★</p>
+                <p class="seller-name">Sold by Hannah S.</p>
+                <div class="seller-pic-wrapper"><img src="seller-img/seller3.jpg" alt="Seller Profile" class="seller-pic"> </div>
+              </div>
+
+          <div class="quantity-control">
+            <button class="qty-btn decrease">−</button>
+            <input type="number" class="qty-input" value="1" min="1">
+            <button class="qty-btn increase">+</button>
+          </div>
+          
+          <div class="card-actions">
+            <button class="add-to-cart-btn">Add to Cart</button>
+            <button class="message-btn">Message</button>
+          </div>
+        </div>
+
+        <!-- Fourth Card -->
+        <div class="card">
+          <div class="image-container">
+            <img src="product-img/onion.jpg" alt="Product Image">
+             <button class="save-btn">📌</button>
+          </div>
+          <h3 class="product-name">Onion</h3>
+          <div class="price">
+            <p class="price-kilo">A$6.00/kg</p>
+            <p class="price-unit">A$6.20 ea</p>
+          </div>
+          <div class="seller-info"> 
+                <p class="rating">4.3 ★</p>
+                <p class="seller-name">Sold by Steve S.</p>
+                <div class="seller-pic-wrapper"><img src="seller-img/seller4.jpg" alt="Seller Profile" class="seller-pic"> </div>
+              </div>
+
+          <div class="quantity-control">
+            <button class="qty-btn decrease">−</button>
+            <input type="number" class="qty-input" value="1" min="1">
+            <button class="qty-btn increase">+</button>
+          </div>
+          
+          <div class="card-actions">
+            <button class="add-to-cart-btn">Add to Cart</button>
+            <button class="message-btn">Message</button>
+          </div>
+        </div>
+        
+      </div>
+
+
+
+      
+    </div>
+  </div>
+
+  <script src="cart.js"></script>
+
+
+<div id="contactSellerModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Contact Seller</h2>
+    <p id="productName"></p>
+    <form>
+      <label for="buyerName">Your Name:</label>
+      <input type="text" id="buyerName" required>
+
+      <label for="buyerEmail">Your Email:</label>
+      <input type="email" id="buyerEmail" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" rows="4" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  
+  const modal = document.getElementById("contactSellerModal");
+  const closeBtn = modal.querySelector(".close");
+  const productNameEl = document.getElementById("productName");
+
+
+  const messageButtons = document.querySelectorAll(".message-btn");
+
+  messageButtons.forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      const card = e.target.closest(".card");
+      const name = card.querySelector(".product-name").textContent;
+
+      
+      productNameEl.textContent = `You are contacting the seller of: ${name}`;
+
+      modal.style.display = "block";
+    });
+  });
+
+  closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+
+  
+  modal.querySelector("form").addEventListener("submit", (e) => {
+    e.preventDefault();
+    alert("Message sent to seller!");
+    modal.style.display = "none";
+  });
+
+  const qtyControls = document.querySelectorAll('.quantity-control');
+
+  qtyControls.forEach(control => {
+    const input = control.querySelector('.qty-input');
+    const btnDecrease = control.querySelector('.decrease');
+    const btnIncrease = control.querySelector('.increase');
+
+   
+    btnDecrease.addEventListener('click', () => {
+      let current = parseInt(input.value) || 1;
+      if (current > parseInt(input.min) || 1) {
+        input.value = current - 1;
+      }
+    });
+
+    
+    btnIncrease.addEventListener('click', () => {
+      let current = parseInt(input.value) || 1;
+      input.value = current + 1;
+    });
+  });
+
+  const addCartBtns = document.querySelectorAll('.add-to-cart-btn');
+  addCartBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const card = btn.closest('.card');
+      const productName = card.querySelector('.product-name').textContent;
+      const priceUnit = card.querySelector('.price-unit').textContent;
+      const quantity = parseInt(card.querySelector('.qty-input').value);
+      const imageSrc = card.querySelector('img').getAttribute('src').split('/').pop(); // only filename
+
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const existingItemIndex = cart.findIndex(item => item.name === productName);
+      if (existingItemIndex > -1) {
+        cart[existingItemIndex].quantity += quantity;
+      } else {
+        cart.push({ name: productName, price: priceUnit, quantity, image: imageSrc });
+      }
+      localStorage.setItem('cart', JSON.stringify(cart));
+      alert(`Added ${quantity} × ${productName} to cart!`);
+    });
+  });
+
+
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="cart.css">
+  <title>Cart</title>
+</head>
+<body>
+  <div class="header">
+    <div class="logo" onclick="location.href='index.html'">S P R O U T</div>
+    <button onclick="location.href='index.html'" class="home-btn">Back</button>
+  </div>
+
+  <div class="cart-container">
+    <h1>Your Cart</h1>
+
+    <div class="cart-items">
+
+   
+      <div class="cart-item" data-price="1.20">
+        <img src="product-img/carrot.jpg" alt="Baby organic carrots">
+        <div class="item-details">
+          <h3 class="product-name">Baby organic carrots</h3>
+          <p class="price-unit">A$1.20 ea</p>
+          <div class="quantity-control">
+            <button class="qty-btn decrease">−</button>
+            <input type="number" class="qty-input" value="1" min="1">
+            <button class="qty-btn increase">+</button>
+          </div>
+          <button class="remove-btn">Remove</button>
+        </div>
+      </div>
+
+
+      <div class="cart-item" data-price="6.20">
+        <img src="product-img/granola.jpg" alt="Homemade granola">
+        <div class="item-details">
+          <h3 class="product-name">Homemade granola</h3>
+          <p class="price-unit">A$6.20 ea</p>
+          <div class="quantity-control">
+            <button class="qty-btn decrease">−</button>
+            <input type="number" class="qty-input" value="1" min="1">
+            <button class="qty-btn increase">+</button>
+          </div>
+          <button class="remove-btn">Remove</button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="cart-summary">
+      <p>Total: A$ <span id="total-price">0.00</span></p>
+      <button class="checkout-btn" onclick="location.href='checkout.html'">Proceed to Checkout</button>
+    </div>
+  </div>
+
+  <script>
+    const cartItems = document.querySelectorAll('.cart-item');
+    const totalPriceEl = document.getElementById('total-price');
+
+    function updateTotal() {
+      let total = 0;
+      cartItems.forEach(item => {
+        const price = parseFloat(item.dataset.price);
+        const qty = parseInt(item.querySelector('.qty-input').value);
+        total += price * qty;
+      });
+      totalPriceEl.textContent = total.toFixed(2);
+    }
+
+    cartItems.forEach(item => {
+      const decreaseBtn = item.querySelector('.decrease');
+      const increaseBtn = item.querySelector('.increase');
+      const qtyInput = item.querySelector('.qty-input');
+      const removeBtn = item.querySelector('.remove-btn');
+
+      decreaseBtn.addEventListener('click', () => {
+        if (qtyInput.value > 1) {
+          qtyInput.value = parseInt(qtyInput.value) - 1;
+          updateTotal();
+        }
+      });
+
+      increaseBtn.addEventListener('click', () => {
+        qtyInput.value = parseInt(qtyInput.value) + 1;
+        updateTotal();
+      });
+
+      qtyInput.addEventListener('input', () => {
+        if (qtyInput.value < 1) qtyInput.value = 1;
+        updateTotal();
+      });
+
+      removeBtn.addEventListener('click', () => {
+        item.remove();
+        updateTotal();
+      });
+    });
+
+ 
+    updateTotal();
+  </script>
+</body>
+</html>
