@@ -1,0 +1,94 @@
+/*
+.card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-wrap: wrap; 
+  justify-content: left;
+  
+}
+  */
+
+
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  width: 225px;
+  padding: 0px;
+  text-align: left;
+  transition: transform 0.2s;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.card h3.product-name {
+  margin: 10px 0 5px;
+  color: #333;
+}
+
+.card p {
+  font-size: 14px;
+  color: #555;
+  margin: 4px 0;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.price {
+  display: flex;
+  gap: 10px;
+}
+
+.seller-info {
+  display: flex;
+  gap: 10px;
+  align-items:center;
+}
+
+.image-container {
+  position: relative;  /* key: so buttons position on top of image */
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+}
+
+.image-container img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;  /* remove bottom space */
+}
+
+.image-container button {
+  position: absolute;
+  right: 10px;
+  width: 35px;
+  height: 35px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(255,255,255,0.85);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  transition: background-color 0.2s;
+}
+
+.bookmark-btn {
+  top: 10px; 
+}
+
+.cart-btn {
+  top: 55px;  
+}
+
+.image-container button:hover {
+  background-color: rgba(255,255,255,1);
+}
