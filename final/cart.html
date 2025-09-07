@@ -60,14 +60,19 @@
     const totalPriceEl = document.getElementById('total-price');
 
     function updateTotal() {
-      let total = 0;
+      let totalPrice = 0;
+      let totalQty = 0;
+
       cartItems.forEach(item => {
         const price = parseFloat(item.dataset.price);
         const qty = parseInt(item.querySelector('.qty-input').value);
-        total += price * qty;
+
+        totalPrice += price * qty;
       });
-      totalPriceEl.textContent = total.toFixed(2);
-    }
+
+      totalPriceEl.textContent = totalPrice.toFixed(2);
+}
+
 
     cartItems.forEach(item => {
       const decreaseBtn = item.querySelector('.decrease');
